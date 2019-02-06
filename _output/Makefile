@@ -1,1 +1,1 @@
-../../_output.mk
+../rase/scripts/db.output.mk
