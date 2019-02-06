@@ -15,7 +15,7 @@ include ../conf.mk
 all: .complete
 
 .complete:
-	../../scripts/prepare_tree.py \
+	../rase/rase/rase_db_prepare_tree.py \
 		-i ../published/SPARC.core_genes.tree \
 		-o tree.newick \
 		-m ../published/isolates.2013.tsv \

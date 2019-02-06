@@ -12,14 +12,23 @@ SHELL=/usr/bin/env bash -eo pipefail
 
 include ../conf.mk
 
+# print leave order
+TPO=../rase/rase/rase_db_tree_print_order.py
+# assign res categories
+ARC=../rase/rase/rase_db_assign_re_cat.py
+# ancestral state reconstruction
+ASR=../rase/rase/rase_db_ancestral_state_reconstruction.py
+# sort with header
+SWH=../rase/scripts/sort_with_header.sh
+
 all: .res_cat.complete
 
 .res_cat.complete:
-	../../scripts/tree_print_order.py -i ../tree/tree.newick > _leaves.tsv
+	$(TPO) -i ../tree/tree.newick > _leaves.tsv
 
 	# sort metadata tables
-	cat ../published/isolates.2013.tsv | ../../scripts/sort_with_header.sh -k 3 > _isolates.2013.tsv
-	cat ../published/isolates.2015.tsv | ../../scripts/sort_with_header.sh -k 2 > _isolates.2015.tsv
+	cat ../published/isolates.2013.tsv | $(SWH) -k 3 > _isolates.2013.tsv
+	cat ../published/isolates.2015.tsv | $(SWH) -k 2 > _isolates.2015.tsv
 
 
 	# check if taxids are the same
@@ -31,16 +40,16 @@ all: .res_cat.complete
 
 
 	# assign resistance categories
-	../../scripts/assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(pen) -m 12 -a pen > _res_cat.pen.tsv
-	../../scripts/assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(cro) -m 13 -a cro > _res_cat.cro.tsv
-	../../scripts/assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(tmp) -m 14 -a tmp > _res_cat.tmp.tsv
-	../../scripts/assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(ery) -m 15 -a ery > _res_cat.ery.tsv
-	../../scripts/assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(tet) -m 16 -a tet > _res_cat.tet.tsv
+	$(ARC) -i _isolates.2013.tsv -t 2 -b $(pen) -m 12 -a pen > _res_cat.pen.tsv
+	$(ARC) -i _isolates.2013.tsv -t 2 -b $(cro) -m 13 -a cro > _res_cat.cro.tsv
+	$(ARC) -i _isolates.2013.tsv -t 2 -b $(tmp) -m 14 -a tmp > _res_cat.tmp.tsv
+	$(ARC) -i _isolates.2013.tsv -t 2 -b $(ery) -m 15 -a ery > _res_cat.ery.tsv
+	$(ARC) -i _isolates.2013.tsv -t 2 -b $(tet) -m 16 -a tet > _res_cat.tet.tsv
 
 	# ancestral state reconstruction
 	for x in _res*.tsv; do \
 		ant=$$(echo "$$x" | sed 's/.tsv$$//g' | sed 's/_res_cat\.//g'); \
-		../../scripts/ancestral_state_reconstruction.py -a $$ant -i "$$x" -t ../tree/tree.newick -p "_res_tree.$$ant.pdf" > "_$$x"; \
+		$(ASR) -a $$ant -i "$$x" -t ../tree/tree.newick -p "_res_tree.$$ant.pdf" > "_$$x"; \
 	done
 
 	# assemble the final file
