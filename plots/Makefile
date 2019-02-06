@@ -1,1 +1,1 @@
-../../plots.mk
+../rase/scripts/db.plots.mk

@@ -1,1 +1,1 @@
-../../index.mk
+../rase/scripts/db.index.mk

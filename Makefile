@@ -1,1 +1,1 @@
-../main.mk
+./rase/scripts/db.main.mk
