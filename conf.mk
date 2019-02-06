@@ -2,8 +2,8 @@
 # INDEX #
 #########
 
-#index name
-name=$(shell basename $(abspath $(CURDIR)/..))
+#db name
+name=spneumoniae-sparc
 
 # k-mer size, can contain multiple values
 k=18
