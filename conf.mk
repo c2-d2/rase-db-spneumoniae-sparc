@@ -25,11 +25,11 @@ k=18
 
 pen=0.06  # Benzylpenicillin
 cro=0.25  # Ceftriaxone
-tmp=1.00  # Trimethoprim
+sxt=1.00  # Trimethoprim-sulfamethoxazole
 ery=0.25  # Erythromycin
 tet=1.00  # Tetracycline
 
 ############
 # PLOTTING #
 ############
-antibiotics=pen cro tmp ery tet
+antibiotics=pen cro sxt ery tet

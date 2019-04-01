@@ -39,7 +39,7 @@ step2: ## Assemble metadata tables
 step3: ## Assign resistance categories (apply breakpoints)
 	rase_db_assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(pen) -m 12 -a pen > _res_cat.pen.tsv
 	rase_db_assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(cro) -m 13 -a cro > _res_cat.cro.tsv
-	rase_db_assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(tmp) -m 14 -a tmp > _res_cat.tmp.tsv
+	rase_db_assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(sxt) -m 14 -a sxt > _res_cat.sxt.tsv
 	rase_db_assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(ery) -m 15 -a ery > _res_cat.ery.tsv
 	rase_db_assign_re_cat.py -i _isolates.2013.tsv -t 2 -b $(tet) -m 16 -a tet > _res_cat.tet.tsv
 
