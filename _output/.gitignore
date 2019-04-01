@@ -1,1 +1,3 @@
-../rase/scripts/.gitignore.index
+*.tar.gz
+*.tsv
+*/

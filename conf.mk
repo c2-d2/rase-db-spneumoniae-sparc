@@ -1,3 +1,14 @@
+#
+# Configuration file for a RASE database. Defines k-mer size resistance
+# breakpoints for individual antibiotics and the order of antibiotics for
+# plotting.
+#
+# Author:  Karel Brinda <kbrinda@hsph.harvard.edu>
+#
+# License: MIT
+#
+
+
 #########
 # INDEX #
 #########
