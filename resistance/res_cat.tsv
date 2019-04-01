@@ -1,4 +1,4 @@
-taxid	phylogroup	serotype	ST	order	pen_mic	pen_int	pen_cat	cro_mic	cro_int	cro_cat	tmp_mic	tmp_int	tmp_cat	ery_mic	ery_int	ery_cat	tet_mic	tet_int	tet_cat
+taxid	pg	serotype	ST	order	pen_mic	pen_int	pen_cat	cro_mic	cro_int	cro_cat	tmp_mic	tmp_int	tmp_cat	ery_mic	ery_int	ery_cat	tet_mic	tet_int	tet_cat
 001334	1	10A	585	462	<0.03	0-0.03	S	<0.03	0-0.03	S	0.25/4	0.25-0.25	S	<0.03	0-0.03	S	0.25	0.25-0.25	S
 001996	1	6A	1360	441	<0.03	0-0.03	S	<0.03	0-0.03	S	0.25/4	0.25-0.25	S	<0.03	0-0.03	S	0.25	0.25-0.25	S
 007649	11	35B	558	181	2	2.0-2.0	R	0.5	0.5-0.5	R	0.25/4	0.25-0.25	S	>1	1.0-Inf	R	0.25	0.25-0.25	S

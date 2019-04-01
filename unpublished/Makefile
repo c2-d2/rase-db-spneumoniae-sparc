@@ -1,23 +1,20 @@
 #
+# Test that all unpublished input data were copied by user to this directory.
+# If some of them are missing, fail.
+#
 # Author:  Karel Brinda <kbrinda@hsph.harvard.edu>
 #
 # License: MIT
 #
-#
-.PHONY: all help clean cleanall
-.SECONDARY:
-.SUFFIXES:
 
-SHELL=/usr/bin/env bash -eo pipefail
+.PHONY: test
 
-include ../conf.mk
+include ../*.mk
 
-all:
+all: test
 
-help: ## Print help message
-	@echo "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s : | sort)"
-
-clean: ## Clean
+test: ## Check if all files are present
 
 
-cleanall:
+cleanall: clean
+
