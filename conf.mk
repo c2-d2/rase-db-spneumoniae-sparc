@@ -19,17 +19,19 @@ name=spneumoniae-sparc
 # k-mer size, can contain multiple values
 k=18
 
+
+###############
+# ANTIBIOTICS #
+###############
+
+antibiotics=cro ery pen sxt tet
+
 ###############
 # BREAKPOINTS #
 ###############
 
-pen=0.06  # Benzylpenicillin
 cro=0.25  # Ceftriaxone
-sxt=1.00  # Trimethoprim-sulfamethoxazole
 ery=0.25  # Erythromycin
+pen=0.06  # Benzylpenicillin
+sxt=1.00  # Trimethoprim-sulfamethoxazole
 tet=1.00  # Tetracycline
-
-############
-# PLOTTING #
-############
-antibiotics=pen cro sxt ery tet
