@@ -53,9 +53,9 @@ step5: ## Assemble metadata file
 	paste \
 		<(echo "taxid"; cat _taxids1.txt) \
 		<(cut -f 13  _isolates.2015.tsv | sed 's/Sequence Cluster/pg/g') \
+		<(cut -f 2   _leaves.tsv) \
 		<(cut -f 9   _isolates.2015.tsv | sed 's/Serotype From Reads/serotype/g') \
 		<(cut -f 11  _isolates.2015.tsv | sed 's/Sequence Type From Reads/ST/g') \
-		<(cut -f 2   _leaves.tsv) \
 		$(foreach ant, $(antibiotics),<(cut -f 2-4 __res_cat.$(ant).tsv) ) \
 	> res_cat.tsv
 
