@@ -6,6 +6,6 @@ all: #.complete
 	./download_sparc1_assemblies.sh
 	touch $@
 
-clean:
+cleanall:
 	rm -f *.fa .complete
 
