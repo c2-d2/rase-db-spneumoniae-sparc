@@ -1,6 +1,6 @@
 include ../*.mk
 
-all: .complete
+all: #.complete
 
 .complete:
 	./download_sparc1_assemblies.sh
