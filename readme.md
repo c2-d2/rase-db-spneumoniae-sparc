@@ -15,13 +15,14 @@ The draft assemblies  were downloaded from the SRA FTP server using the accessio
 ## Issues
 
 
-Please use `Github issues <https://github.com/c2-d2/rase-db-spneumonieae/issues>`_.
+Please use [Github issues](https://github.com/c2-d2/rase-db-spneumonieae/issues).
 
 
-Changelog
+
+## Changelog and releases
 ---------
 
-See `Releases <https://github.com/c2-d2/rase-db-spneumonieae/releases>`_.
+See [Github releases](https://github.com/c2-d2/rase-db-spneumonieae/releases).
 
 
 ## License
