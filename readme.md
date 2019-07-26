@@ -20,9 +20,8 @@ Please use [Github issues](https://github.com/c2-d2/rase-db-spneumonieae/issues)
 
 
 ## Changelog and releases
----------
 
-See [Github releases](https://github.com/c2-d2/rase-db-spneumonieae/releases).
+See [Github releases](https://github.com/c2-d2/rase-db-spneumoniae/releases).
 
 
 ## License
