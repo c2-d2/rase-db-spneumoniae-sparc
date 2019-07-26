@@ -1,4 +1,4 @@
-# *S. pneumoniae* RASE database
+# *Streptococcus pneumoniae* RASE database
 
 ## Dataset
 
